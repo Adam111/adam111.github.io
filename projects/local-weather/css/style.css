@@ -1,23 +1,7 @@
 .jumbotron {
-  margin-top: 30px;
-}
-
-.text-bold {
-  font-weight: bold;
-}
-
-.m0 {
-  margin: 0;
-}
-
-.mt0 {
-  margin-top: 0;
-}
-
-.mb10px {
-  margin-bottom: 10px;
+	margin-top: 2rem;
 }
 
 #unit {
-  text-decoration: none;
+	text-decoration: none;
 }
