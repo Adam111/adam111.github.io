@@ -1,8 +1,11 @@
+const projectName = "random-quote-machine";
+localStorage.setItem('example_project', 'Randowm Quote Machine');
+
 $(document).ready(function() {
   getQuote();
 });
 
-$('#new_quote').click(function() {
+$('#new-quote').click(function() {
   getQuote();
 });
 
@@ -14,6 +17,6 @@ function getQuote() {
     
     $('blockquote p').html(quote);
     $('blockquote footer cite').html(author).attr('title', author);
-    $('#tweet_quote').attr('href', 'https://twitter.com/intent/tweet?text=' + encodeURIComponent(tweetText));
+    $('#tweet-quote').attr('href', 'https://twitter.com/intent/tweet?text=' + encodeURIComponent(tweetText));
   });
 }

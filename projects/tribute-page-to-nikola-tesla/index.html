@@ -1,11 +1,12 @@
 <!DOCTYPE html>
-<html >
+<html lang="en" >
+
 <head>
   <meta charset="UTF-8">
   <title>Tribute Page to Nikola Tesla</title>
   
   
-  <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css'>
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css'>
 
       <link rel="stylesheet" href="css/style.css">
 
@@ -13,13 +14,15 @@
 </head>
 
 <body>
-  <div class="container">
+
+  <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+<div id="main" class="container">
   <div class="jumbotron">
     <div class="row">
       <div class="col-md-12">
-        <h1 class="text-center">Nikola Tesla</h1>
+        <h1 id="title" class="text-center">Nikola Tesla</h1>
         <h2 class="text-center">The man who changed the world</h2>
-        <div class="col-md-6">
+        <div id="tribute-info" class="col-md-6">
           <h3>Here's a simple timeline of his life:</h3>
           <ul class="list-unstyled">
             <li><strong>1856</strong>: Born in Smiljan, Austrian Empire (modern-day Croatia)</li>
@@ -43,23 +46,28 @@
           </blockquote>
         </div>
         <div class="col-md-6">
-          <div class="thumbnail">
-            <img class="img-responsive center-block" src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/Tesla_circa_1890.jpeg/447px-Tesla_circa_1890.jpeg" alt="Photo of Nikola Tesla">
-            <div class="caption">
-              <div class="text-center">Tesla, aged 34, circa 1890 photo by <a href="https://en.wikipedia.org/wiki/Napoleon_Sarony" title="Napoleon Sarony">Napoleon Sarony</a> (from <a href="https://en.wikipedia.org/wiki/File:Tesla_circa_1890.jpeg">Wikipedia</a>)</div>
-            </div>
+          <div id="img-div" class="thumbnail">
+            <img id="image" class="img-responsive center-block" src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/Tesla_circa_1890.jpeg/447px-Tesla_circa_1890.jpeg" alt="Photo of Nikola Tesla">
+            <div id="img-caption" class="caption text-center">Tesla, aged 34, circa 1890 photo by <a href="https://en.wikipedia.org/wiki/Napoleon_Sarony" title="Napoleon Sarony">Napoleon Sarony</a> (from <a href="https://en.wikipedia.org/wiki/File:Tesla_circa_1890.jpeg">Wikipedia</a>)</div>
           </div>
         </div>
       </div>
     </div>
     <div class="row">
       <div class="col-md-12">
-        <p class="text-center">If you have some more time, you can read more about this exceptional person on <a href="https://en.wikipedia.org/wiki/Nikola_Tesla" target="_blank">Wikipedia</a> and read more quotes on <a href="https://en.wikiquote.org/wiki/Nikola_Tesla" target="_blank">Wikiquote</a>.</p>
+        <p class="text-center">If you have some more time, you can read more about this exceptional person on <a id="tribute-link" href="https://en.wikipedia.org/wiki/Nikola_Tesla" target="_blank">Wikipedia</a> and read more quotes on <a href="https://en.wikiquote.org/wiki/Nikola_Tesla" target="_blank">Wikiquote</a>.</p>
       </div>
     </div>
   </div>
 </div>
   
   
+
+    <script  src="js/index.js"></script>
+
+
+
+
 </body>
+
 </html>
