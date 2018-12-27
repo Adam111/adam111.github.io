@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>Survey Form</title>
+  
+  
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.2/css/bootstrap.min.css'>
+
+      <link rel="stylesheet" href="css/style.css">
+
+  
+</head>
+
+<body>
+
+  <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+<div class="container">
+  <div class="row">
+		<div class="col">
+			<div class="jumbotron p-4">
+				<div class="container text-center">
+					<h1 id="title">Survey Form</h1>
+					<p id="description">Let me know how I can improve this web page.</p>
+					<form id="survey-form">
+						<div class="form-row">
+							<div class="form-group col">
+								<label id="name-label" for="name">Name *</label>
+								<input id="name" class="form-control" type="text" name="name" required placeholder="Name">
+							</div>
+							<div class="form-group col">
+								<label id="email-label" for="email">Email address *</label>
+								<input id="email" class="form-control" type="email" name="email" required placeholder="Email address">
+							</div>
+							<div class="form-group col">
+								<label id="number-label" for="number">Age</label>
+								<input id="number" class="form-control" type="number" min="1" max="130" name="number" placeholder="Age">
+							</div>
+						</div>
+						<div class="form-row">
+							<div class="form-group col">
+								<label id="dropdown-label" for="dropdown">How did you find this web page?</label>
+								<select id="dropdown" class="form-control" name="dropdown">
+									<option selected disabled value="">Choose...</option>
+									<option value="search">Search engine</option>
+									<option value="link">Link from a web page</option>
+									<option value="other">Other</option>
+								</select>
+							</div>
+							<div class="form-group col">
+								<p>Do you like this web page?</p>
+								<div class="form-check form-check-inline">
+									<input id="like-yes" class="form-check-input" type="radio" name="like" value="Yes">
+									<label class="form-check-label" for="like-yes">Yes</label>
+								</div>
+								<div class="form-check form-check-inline">
+									<input id="like-no" class="form-check-input" type="radio" name="like" value="No">
+									<label class="form-check-label" for="like-no">No</label>
+								</div>
+								<div class="form-check form-check-inline">
+									<input id="like-unsure" class="form-check-input" type="radio" name="like" value="Unsure">
+									<label class="form-check-label" for="like-unsure">Not sure</label>
+								</div>
+							</div>
+							<div class="form-group col">
+								<p>Which parts do you like on this web page?</p>
+								<div class="form-check form-check-inline">
+									<input id="like-design" class="form-check-input" type="checkbox" name="like-design" value="Design">
+									<label class="form-check-label" for="like-design">Design</label>
+								</div>
+								<div class="form-check form-check-inline">
+									<input id="like-content" class="form-check-input" type="checkbox" name="like-content" value="Content">
+									<label class="form-check-label" for="like-content">Content</label>
+								</div>
+								<div class="form-check form-check-inline">
+									<input id="like-other" class="form-check-input" type="checkbox" name="like-other" value="Other">
+									<label class="form-check-label" for="like-other">Other</label>
+								</div>
+							</div>
+						</div>
+						<div class="form-row">
+							<div class="form-group col">
+								<label for="comments">Additional comments/feedback</label>
+								<textarea id="comments" class="form-control" name="comments" rows="2" placeholder="Additional comments/feedback"></textarea>
+							</div>
+						</div>
+						<button id="submit" class="btn btn-primary" type="submit">Submit</button>
+					</form>
+				</div>
+			</div>
+		</div>
+  </div>
+</div>
+  
+  
+
+    <script  src="js/index.js"></script>
+
+
+
+
+</body>
+
+</html>

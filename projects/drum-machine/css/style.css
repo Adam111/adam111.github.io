@@ -1,0 +1,12 @@
+.jumbotron {
+	margin-top: 2rem;
+}
+
+.drum-pads button {
+	height: 100%;
+	width: 32%;
+}
+
+.display-container {
+	height: 65px;
+}

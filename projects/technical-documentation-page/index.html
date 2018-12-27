@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>Technical Documentation Page</title>
+  
+  
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css'>
+
+      <link rel="stylesheet" href="css/style.css">
+
+  
+</head>
+
+<body>
+
+  <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+<div class="m-3 p-3">
+	<div class="row">
+		<div class="col-3">
+			<div id="navbar-container" class="jumbotron m-0 p-2">
+				<nav id="navbar" class="navbar navbar-light bg-light">
+					<header>
+						<h3>Technical Documentation Page</h3>
+						<h4>Getting started with HTML</h4>
+					</header>
+					<div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+						<a class="nav-link active" href="#Introduction" role="tab">Introduction</a>
+<!-- 						<nav class="nav nav-pills flex-column">
+							<a class="nav-link ml-3 my-1" href="#What_is_HTML">What is HTML?</a>
+						</nav> -->
+						<a class="nav-link" href="#Anatomy_of_an_HTML_element" role="tab">Anatomy of an HTML element</a>
+<!-- 						<nav class="nav nav-pills flex-column">
+							<a class="nav-link ml-3 my-1" href="#Nesting_elements">Nesting elements</a>
+							<a class="nav-link ml-3 my-1" href="#Block_versus_inline_elements">Block versus inline elements</a>
+							<a class="nav-link ml-3 my-1" href="#Empty_elements">Empty elements</a>
+						</nav> -->
+						<a class="nav-link" href="#Attributes" role="tab">Attributes</a>
+<!-- 						<nav class="nav nav-pills flex-column">
+							<a class="nav-link ml-3 my-1" href="#Adding_attributes_to_an_element">Adding attributes to an element</a>
+							<a class="nav-link ml-3 my-1" href="#Boolean_attributes">Boolean attributes</a>
+						</nav> -->
+						<a class="nav-link" href="#Anatomy_of_an_HTML_document" role="tab">Anatomy of an HTML document</a>
+<!-- 						<nav class="nav nav-pills flex-column">
+							<a class="nav-link ml-3 my-1" href="#Whitespace_in_HTML">Whitespace in HTML</a>
+						</nav> -->
+						<a class="nav-link" href="#Including_special_characters_in_HTML" role="tab">Including special characters in HTML</a>
+<!-- 						<nav class="nav nav-pills flex-column">
+							<a class="nav-link ml-3 my-1" href="#Entity_references">Entity references</a>
+						</nav> -->
+						<a class="nav-link" href="#HTML_comments" role="tab">HTML comments</a>
+						<a class="nav-link" href="#Summary" role="tab">Summary</a>
+						<a class="nav-link" href="#Source" role="tab">Source</a>
+					</div>
+				</nav>
+			</div>
+		</div>
+		<div class="col-9">
+			<div class="jumbotron m-0 p-4">
+				<main id="main-doc">
+					<section id="Introduction" class="main-section">
+						<header><h4>Introduction</h4></header>
+						<h5 id="What_is_HTML">What is HTML?</h5>
+						<p><a href="https://developer.mozilla.org/en-US/docs/Glossary/HTML" class="glossaryLink" title="HTML: HTML (HyperText Markup Language) is a descriptive language that specifies webpage structure." target="_blank">HTML</a> (Hypertext Markup Language) is not a programming language; it is a <em>markup language</em>&nbsp;used to tell your browser how to structure the web pages you visit. It can be as complicated or as simple as the web developer wishes it to be. HTML consists of a series of <a href="https://developer.mozilla.org/en-US/docs/Glossary/Element" class="glossaryLink" title="elements: An element is a part of a webpage. In XML and HTML, an element may contain a data item or a chunk of text or an image, or perhaps nothing. A typical element includes an opening tag with some attributes, enclosed text content, and a closing tag." target="_blank">elements</a>, which you use to enclose, wrap, or <em>mark up</em> different parts of the content to make it appear or act a certain way. The enclosing <a href="https://developer.mozilla.org/en-US/docs/Glossary/Tag" class="glossaryLink" title="tags: In HTML a tag is used for creating an element.&nbsp; The name of an HTML element is the name used in angle brackets such as <p> for paragraph.&nbsp; Note that the end tag's name is preceded by a slash character, &quot;</p>&quot;, and that in empty elements the end tag is neither required nor allowed. If attributes are not mentioned, default values are used in each case." target="_blank">tags</a> can make a bit of content into a hyperlink to link to another page on the web, italicize words, and so on.&nbsp;<br>For example, take the following line of content:</p>
+						<p><code>My cat is very grumpy</code></p>
+						<p>If we wanted the line to stand by itself, we could specify that it is a paragraph by enclosing it in a paragraph&nbsp; (<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/p" title="The HTML <p> element represents a paragraph." target="_blank"><code>&lt;p&gt;</code></a>) element:</p>
+						<p><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">&gt;</span></span>My cat is very grumpy<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span></code></p>
+					</section>
+					<section id="Anatomy_of_an_HTML_element" class="main-section">
+						<header><h4>Anatomy of an HTML element</h4></header>
+						<p>Let's explore our paragraph element a bit further:</p>
+						<p><img src="https://mdn.mozillademos.org/files/9347/grumpy-cat-small.png" alt="" style="display: block; height: 255px; margin: 0; width: 821px;"></p>
+						<p>The main parts of our element are:</p>
+						<p>
+							<ol>
+								<li><strong>The opening tag:</strong> This consists of the name of the element (in this case, p), wrapped in opening and closing <strong>angle brackets</strong>. This states where the element begins or starts to take effect — in this case where the start of the paragraph is.</li>
+								<li><strong>The closing tag:</strong> This is the same as the opening tag, except that it includes a forward slash before the element name. This states where the element ends — in this case where the end of the paragraph is. Failing to include a closing tag is a common beginner error and can lead to strange results.</li>
+								<li><strong>The content:</strong> This is the content of the element, which in this case is just text.</li>
+								<li><strong>The element:</strong> The opening tag&nbsp;plus the closing tag plus the content equals the element.</li>
+							</ol>
+						</p>
+						<h5 id="Nesting_elements">Nesting elements</h5>
+						<p>You can put elements inside other elements too — this is called <strong>nesting</strong>. If we wanted to state that our cat is <strong>very</strong> grumpy, we could wrap the word "very" in a <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/strong" title="The HTML Strong Importance Element (<strong>) indicates that its contents have strong importance, seriousness, or urgency. Browsers typically render the contents in bold type." target="_blank"><code>&lt;strong&gt;</code></a> element, which means that the word is to be strongly emphasized:</p>
+											<p><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">&gt;</span></span>My cat is <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>strong</span><span class="token punctuation">&gt;</span></span>very<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>strong</span><span class="token punctuation">&gt;</span></span> grumpy.<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span></code></p>
+											<p>You do however need to make sure that your elements are properly nested: in the example above, we opened the p element first, then the strong element, therefore we have to close the strong element first, then the p. The following is incorrect:</p>
+											<p><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">&gt;</span></span>My cat is <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>strong</span><span class="token punctuation">&gt;</span></span>very grumpy.<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>strong</span><span class="token punctuation">&gt;</span></span></code></p>
+											<p>The elements have to open and close correctly, so they are clearly inside or outside one another. If they overlap like above, then your web browser will try to make a best guess at what you were trying to say, and you may well get unexpected results. So don't do it!</p>
+											<h5 id="Block_versus_inline_elements">Block versus inline elements</h5>
+											<p>There are two important categories of elements in HTML which you should know about. They are block-level elements and inline elements.</p>
+											<ul>
+													<li>Block-level elements form a visible block on a page — they will appear on a new line from whatever content went before it, and any content that goes after it will also appear on a new line. Block-level elements tend to be structural elements on the page that represent, for example,&nbsp;paragraphs, lists, navigation menus, footers, etc. A block-level element wouldn't be nested inside an inline element, but it might be nested inside another block-level element.</li>
+													<li>Inline elements are those that are contained within block-level elements and surround only small parts of the document’s content, not entire paragraphs and groupings of content. An inline element will not cause a new line to appear in the document;&nbsp;they would normally appear inside a paragraph of text, for example an <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a" title="The HTML <a> element (or anchor element) creates a hyperlink to other web pages, files, locations within the same page, email addresses, or any other URL." target="_blank"><code>&lt;a&gt;</code></a> element (hyperlink) or emphasis elements such as <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/em" title="The HTML <em> element marks text that has stress emphasis. The <em> element can be nested, with each level of nesting indicating a greater degree of emphasis." target="_blank"><code>&lt;em&gt;</code></a> or <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/strong" title="The HTML Strong Importance Element (<strong>) indicates that its contents have strong importance, seriousness, or urgency. Browsers typically render the contents in bold type." target="_blank"><code>&lt;strong&gt;</code></a>.</li>
+											</ul>
+											<p>Take the following example:</p>
+											<p>
+													<code><span class="token punctuation">&lt;</span>em</span><span class="token punctuation">&gt;</span></span>first<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>em</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>em</span><span class="token punctuation">&gt;</span></span>second<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>em</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>em</span><span class="token punctuation">&gt;</span></span>third<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>em</span><span class="token punctuation">&gt;</span></span><br><br><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">&gt;</span></span>fourth<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">&gt;</span></span>fifth<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">&gt;</span></span>sixth<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></code>
+											</p>
+											<p><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/em" title="The HTML <em> element marks text that has stress emphasis. The <em> element can be nested, with each level of nesting indicating a greater degree of emphasis." target="_blank"><code>&lt;em&gt;</code></a> is an inline element, so as you can see below, the first three elements sit on the same line as one another with no space in between. On the other hand, <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/p" title="The HTML <p> element represents a paragraph." target="_blank"><code>&lt;p&gt;</code></a>&nbsp;is a block-level element, so each element appears on a new line, with space above and below each (the spacing is due to default <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS" target="_blank">CSS styling</a> that the browser applies to paragraphs).</p>
+											<p>
+													<em>first</em><em>second</em><em>third</em>
+
+													<p>fourth</p><p>fifth</p><p>sixth</p>
+											</p>
+											<h5 id="Empty_elements">Empty elements</h5>
+											<p>Not all elements follow the above pattern of opening tag, content, closing tag. Some elements consist only of a single tag, which is usually used to insert/embed something in the document at the place it is included. For example, the <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img" title="The HTML <img> element embeds an image into the document. It is a replaced element." target="_blank"><code>&lt;img&gt;</code></a> element embeds an image file onto a page in the position it is included in:</p>
+											<p><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>img</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>https://raw.githubusercontent.com/mdn/beginner-html-site/gh-pages/images/firefox-icon.png<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span></code></p>
+											<p>This would output the following on your page:</p>
+											<p><img src="https://raw.githubusercontent.com/mdn/beginner-html-site/gh-pages/images/firefox-icon.png"></p>
+					</section>
+					<section id="Attributes" class="main-section">
+						<header><h4>Attributes</h4></header>
+						<p>Elements can also have attributes, which look like this:</p>
+						<p><img src="https://mdn.mozillademos.org/files/9345/grumpy-cat-attribute-small.png" alt="&amp;lt;p class=&quot;editor-note&quot;>My cat is very grumpy&amp;lt;/p>" style="display: block; height: 156px; margin: 0; width: 1287px;"></p>
+						<p>Attributes contain extra information about the element&nbsp;which you don't want to appear in the actual content. In this case, the <code>class</code> attribute allows you to give the element an identifying name that can be later used to target the element with style information and other things.</p>
+						<p>An attribute should have:</p>
+						<p>
+							<ol>
+								<li>A space between it and the element name (or the previous attribute, if the element already has one or more attributes.)</li>
+								<li>The attribute name, followed by an equals sign.</li>
+								<li>An attribute value, with opening and closing quote marks wrapped around it.</li>
+							</ol>
+						</p>
+											<h5 id="Adding_attributes_to_an_element">Adding attributes to an element</h5>
+											<p>Another example of an element is <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a" title="The HTML <a> element (or anchor element) creates a hyperlink to other web pages, files, locations within the same page, email addresses, or any other URL." target="_blank"><code>&lt;a&gt;</code></a> — this stands for "anchor" and will make the piece of text it wraps around into a hyperlink. This can take a number of attributes, but several are as follows:</p>
+											<ul>
+													<li><code>href</code>: This attribute specifies as its value the web address that you want the link to point to; where the browser navigates to when the link is clicked. For example, <code>href="https://www.mozilla.org/"</code>.</li>
+													<li><code>title</code>: The <code>title</code> attribute specifies extra information about the link, such as what the page is that you are linking to. For example, <code>title="The Mozilla homepage"</code>. This will appear as a tooltip when hovered over.</li>
+													<li><code>target</code>: The <code>target</code> attribute specifies the browsing context which will be used to display the link. For example, <code>target="_blank"</code> will display the link in a new tab.&nbsp;If you want to display the link in the current tab just omit this attribute.</li>
+											</ul>
+											<h5 id="Boolean_attributes">Boolean attributes</h5>
+											<p>You'll sometimes see attributes written without values — this is perfectly allowed. These are called boolean attributes, and they can only have one value, which is generally the same as the attribute name. As an example, take the <code><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#attr-disabled" target="_blank">disabled</a></code> attribute, which you can assign to form input elements if you want them to be disabled (greyed out) so the user can't enter any data in them.</p>
+											<p><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>text<span class="token punctuation">"</span></span> <span class="token attr-name">disabled</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>disabled<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span></code></p>
+											<p>As shorthand, it is perfectly allowable to write this as follows (we've also included a non-disabled form input element for reference, to give you more of an idea what is going on):</p>
+											<p><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>text<span class="token punctuation">"</span></span> <span class="token attr-name">disabled</span><span class="token punctuation">&gt;</span></span><br><br><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>text<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span></code></p>
+											<p>Both will give you an output as follows:</p>
+											<input type="text" disabled="">
+
+											<input type="text">
+					</section>
+					<section id="Anatomy_of_an_HTML_document" class="main-section">
+						<header><h4>Anatomy of an HTML document</h4></header>
+						<p>That wraps up the basics of individual HTML elements, but they aren't very useful on their own. Now we'll look at how individual elements are combined to form an entire HTML page:</p>
+											<p><code><span class="token doctype">&lt;!DOCTYPE html&gt;</span><br>
+													<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span><span class="token punctuation">&gt;</span></span><br>
+									&nbsp;&nbsp;<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">&gt;</span></span><br>
+																	&nbsp;&nbsp;&nbsp;&nbsp;<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">charset</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>utf-8<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><br>
+																	&nbsp;&nbsp;&nbsp;&nbsp;<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>title</span><span class="token punctuation">&gt;</span></span>My test page<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>title</span><span class="token punctuation">&gt;</span></span><br>
+									&nbsp;&nbsp;<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>head</span><span class="token punctuation">&gt;</span></span><br>
+									&nbsp;&nbsp;<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">&gt;</span></span><br>
+																	&nbsp;&nbsp;&nbsp;&nbsp;<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">&gt;</span></span>This is my page<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span><br>
+									&nbsp;&nbsp;<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">&gt;</span></span><br>
+								<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">&gt;</span></span></code></p>
+						<p>Here we have:</p>
+						<p>
+													<ol>
+															<li><code>&lt;!DOCTYPE html&gt;</code>: The doctype. In the mists of time, when HTML was young (about 1991/2), doctypes were meant to act as links to a set of rules that the HTML page had to follow to be considered good HTML, which could mean automatic error checking and other useful things. They used to look something like this:
+																	<div><code><span class="token doctype">&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+															"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"&gt;</span></code></div>
+																			However, these days no one really cares about them, and they are really just a historical artifact that needs to be included for everything to work right.&nbsp;<code>&lt;!DOCTYPE html&gt;</code> is the shortest string of characters that counts as a valid doctype; that's all you really need to know.</li>
+															<li><code>&lt;html&gt;&lt;/html&gt;</code>: The <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/html" title="The HTML <html> element represents the root (top-level element) of an HTML document, so it is also referred to as the root element. All other elements must be descendants of this element." target="_blank"><code>&lt;html&gt;</code></a> element. This element wraps all the content on the entire page, and is sometimes known as the root element.</li>
+															<li><code>&lt;head&gt;&lt;/head&gt;</code>: The <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/head" title="The HTML <head> element provides general information (metadata) about the document, including its title and links to its&nbsp;scripts and style sheets." target="_blank"><code>&lt;head&gt;</code></a> element. This element acts as a container for all the stuff you want to include on the HTML page that <em>isn't</em> the content you are showing to your page's viewers. This includes things like keywords and a page description that you want to appear in search results, CSS to style our content, character set declarations, and more. You'll learn more about this in the next article in the series.</li>
+															<li><code>&lt;meta charset="utf-8"&gt;</code>: This element sets the character set your document should use&nbsp;to UTF-8, which includes most characters from the vast majority of human written languages. Essentially it can now handle any textual content you might put on it. There is no reason not to set this, and it can help avoid some problems later.</li>
+															<li><code>&lt;title&gt;&lt;/title&gt;</code>: The <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/title" title="The HTML Title element (<title>) defines the document's title that is shown in a browser's title bar or a page's tab." target="_blank"><code>&lt;title&gt;</code></a> element. This sets the title of your page, which is the title that appears in the browser tab the page is loaded in, and is used to describe the page when you bookmark/favorite it.</li>
+															<li><code>&lt;body&gt;&lt;/body&gt;</code>: The <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/body" title="The HTML <body> Element represents the content of an HTML&nbsp;document. There can be only one <body> element in a document." target="_blank"><code>&lt;body&gt;</code></a> element. This contains <em>all</em> the content that you want to show to web users when they visit your page, whether that's text, images, videos, games, playable audio tracks, or whatever else.</li>
+													</ol>
+						</p>
+						<h5 id="Whitespace_in_HTML">Whitespace in HTML</h5>
+						<p>In the above examples you may have noticed that a lot of whitespace is included in the code listings — this is not necessary at all; the two following code snippets are equivalent:</p>
+						<p><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">&gt;</span></span>Dogs are silly.<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span><br><br><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">&gt;</span></span>Dogs&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;are<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;silly.<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span></code></p>
+						<p>No matter how much whitespace you use (which can include space characters, but also line breaks), the HTML parser reduces each one down to a single space when rendering the code. So why use so much whitespace? The answer is readability — it is so much easier to understand what is going on in your code if you have it nicely formatted, and not just bunched up together in a big mess. In our HTML we've got each nested element indented by two spaces more than the one it is sitting inside. It is up to you what style of formatting you use (how many spaces for each level of indentation, for example), but you should consider&nbsp;formatting it.</p>
+					</section>
+					<section id="Including_special_characters_in_HTML" class="main-section">
+											<header><h4>Including special characters in HTML</h4></header>
+											<h5 id="Entity_references">Entity references</h5>
+						<p>In HTML, the characters <code>&lt;</code>, <code>&gt;</code>,<code>"</code>,<code>'</code> and <code>&amp;</code> are special characters. They are parts of the HTML syntax itself, so how do you include one of these characters in your text, for example if you really want to use an ampersand or less than sign, and not have it interpreted as code as some browsers may do?</p>
+						<p>We have to use character references — special codes that represent characters, and can be used in these exact circumstances. Each character reference is started with an ampersand (&amp;), and ended by a semicolon (;).</p>
+						<p>
+							<table class="table table-striped">
+								<thead>
+									<tr>
+										<th scope="col">Literal character</th>
+										<th scope="col">Character reference equivalent</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>&lt;</td>
+										<td>&amp;lt;</td>
+									</tr>
+									<tr>
+										<td>&gt;</td>
+										<td>&amp;gt;</td>
+									</tr>
+									<tr>
+										<td>"</td>
+										<td>&amp;quot;</td>
+									</tr>
+									<tr>
+										<td>'</td>
+										<td>&amp;apos;</td>
+									</tr>
+									<tr>
+										<td>&amp;</td>
+										<td>&amp;amp;</td>
+									</tr>
+								</tbody>
+							</table>
+						</p>
+					</section>
+					<section id="HTML_comments" class="main-section">
+						<header><h4>HTML comments</h4></header>
+						<p>In HTML, as with most programming languages, there is a mechanism available to write comments in the code — comments are ignored by the browser and invisible to the user, and their purpose is to allow you to include comments in the code to say how your code works, what the different parts of the code do, etc. This can be very useful if you return to a code base that you've not worked on for six months, and can't remember what you did — or if you hand your code over to someone else to work on.</p>
+						<p>To turn a section of content inside your HTML file into a comment, you need to wrap it in the special markers <code>&lt;!--</code> and <code>--&gt;</code>, for example:</p>
+						<p><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">&gt;</span></span>I'm not inside a comment<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span><br><br><span class="token comment" spellcheck="true">&lt;!-- &lt;p&gt;I am!&lt;/p&gt; --&gt;</span></code></p>
+						<p>As you can see below, the first paragraph appears in the live output, but the second one doesn't.</p>
+						<p>I'm not inside a comment</p>
+
+						<!-- <p>I am!</p> -->
+					</section>
+					<section id="Summary" class="main-section">
+						<header><h4>Summary</h4></header>
+						<p>You've reached the end of the article — we hope you enjoyed your tour of the very basics of HTML!&nbsp;At this&nbsp;point you should understand what the language looks like, how it works at a basic level, and be able to write a few elements and attributes. This is a perfect place to be right now, as in subsequent articles in the module we will go into some of the things you have already looked at in a lot more detail, and introduce some new features of the language. Stay tuned!</p>
+					</section>
+					<section id="Source" class="main-section">
+						<header><h4>Source</h4></header>
+						<p>All the content on this page is from <a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started" target="_blank">MDN</a> and not everything is included. Please follow the link to <a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started" target="_blank">MDN</a> for more.</p>
+					</section>
+				</main>
+			</div>
+		</div>
+	</div>
+</div>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.min.js'></script>
+
+  
+
+    <script  src="js/index.js"></script>
+
+
+
+
+</body>
+
+</html>

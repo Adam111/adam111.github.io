@@ -1,0 +1,15 @@
+.jumbotron {
+	margin-top: 2rem;
+}
+
+button {
+	width: 23%;
+}
+
+button#zero {
+	width: 48.5%;
+}
+
+button#clear {
+	width: 74%;
+}
