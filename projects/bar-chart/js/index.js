@@ -1,5 +1,5 @@
-const projectName = 'bar-chart';
-localStorage.setItem('example_project', 'D3: Bar Chart');
+// const projectName = 'bar-chart';
+// localStorage.setItem('example_project', 'D3: Bar Chart');
 
 d3.json('https://raw.githubusercontent.com/freeCodeCamp/ProjectReferenceData/master/GDP-data.json').then(function(data) {
 	const dataset = data['data'];
@@ -58,7 +58,7 @@ d3.json('https://raw.githubusercontent.com/freeCodeCamp/ProjectReferenceData/mas
 			.attr('transform', 'translate(0, ' + (h - padding) + ')')
 			.call(xAxis);
 
-	svg.append('text')             
+	svg.append('text')
       .attr('transform', 'translate(' + (w / 2) + ', ' + (h - 10) + ')')
       .style('text-anchor', 'middle')
       .text('Date');

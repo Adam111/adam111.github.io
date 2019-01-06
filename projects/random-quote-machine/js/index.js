@@ -1,5 +1,5 @@
-const projectName = 'random-quote-machine';
-localStorage.setItem('example_project', 'Random Quote Machine');
+// const projectName = 'random-quote-machine';
+// localStorage.setItem('example_project', 'Random Quote Machine');
 
 $(document).ready(function() {
 	getQuote();

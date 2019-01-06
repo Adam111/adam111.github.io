@@ -1,30 +1,26 @@
 <!DOCTYPE html>
-<html lang="en" >
-
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Markdown Previewer</title>
-  
-  
-  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.2.1/css/bootstrap.min.css'>
+	<meta charset="UTF-8">
+	<title>Markdown Previewer</title>
 
-      <link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.2.1/css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/style.css">
 
-  
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/marked/0.5.2/marked.min.js"></script>
+	<script src="js/index.js"></script>
 </head>
-
 <body>
-
-  <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
-<div class="container">
-  <div class="row">
-		<div class="col">
-			<div class="jumbotron p-4">
-				<div class="container">
-					<h1 id="title" class="text-center">Markdown Previewer</h1>
-					<div class="row">
-						<div class="col">
-							<textarea id="editor" class="form-control" name="editor" rows="10" placeholder="Enter Markdown here">Header (h1)
+	<div class="container">
+		<div class="row">
+			<div class="col">
+				<div class="jumbotron p-4">
+					<div class="container">
+						<h1 id="title" class="text-center">Markdown Previewer</h1>
+						<div class="row">
+							<div class="col">
+								<textarea id="editor" class="form-control" name="editor" rows="10" placeholder="Enter Markdown here">Header (h1)
 ========
 
 This is a paragraph. Paragraphs are separated by a blank line.
@@ -84,27 +80,16 @@ Horizontal rule:
 
 Image:
 ![Image](https://www.w3schools.com/images/colorpicker.gif "Image")</textarea>
+							</div>
+							<div class="col">
+								<div id="preview">You will see Markdown converted into HTML here.</div>
+							</div>
 						</div>
-						<div class="col">
-							<div id="preview">You will see Markdown converted into HTML here.</div>
-						</div>
+						<p id="credits" class="mt-2 mb-0">This page uses <a href="https://marked.js.org" target="_blank">Marked.js</a>. <br>Image source: <a href="https://www.w3schools.com/colors/colors_picker.asp" target="_blank">W3Schools</a>.</p>
 					</div>
-					<p id="credits" class="mt-2 mb-0">This page uses <a href="https://marked.js.org" target="_blank">Marked.js</a>. <br>Image source: <a href="https://www.w3schools.com/colors/colors_picker.asp" target="_blank">W3Schools</a>.</p>
 				</div>
 			</div>
 		</div>
-  </div>
-</div>
-  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
-<script src='https://cdnjs.cloudflare.com/ajax/libs/marked/0.5.2/marked.min.js'></script>
-
-  
-
-    <script  src="js/index.js"></script>
-
-
-
-
+	</div>
 </body>
-
 </html>

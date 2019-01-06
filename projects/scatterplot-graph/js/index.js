@@ -1,5 +1,5 @@
-const projectName = 'scatter-plot';
-localStorage.setItem('example_project', 'D3: Scatter Plot');
+// const projectName = 'scatter-plot';
+// localStorage.setItem('example_project', 'D3: Scatter Plot');
 
 d3.json('https://raw.githubusercontent.com/freeCodeCamp/ProjectReferenceData/master/cyclist-data.json').then(function(data) {
 	const dataset = data;
@@ -55,7 +55,7 @@ d3.json('https://raw.githubusercontent.com/freeCodeCamp/ProjectReferenceData/mas
 			.attr('transform', 'translate(0, ' + (h - padding) + ')')
 			.call(xAxis);
 
-	svg.append('text')             
+	svg.append('text')
       .attr('transform', 'translate(' + (w / 2) + ', ' + (h - 10) + ')')
       .style('text-anchor', 'middle')
       .text('Date (Year)');

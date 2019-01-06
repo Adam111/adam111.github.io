@@ -1,5 +1,5 @@
-const projectName = 'markdown-previewer';
-localStorage.setItem('example_project', 'Markdown Previewer');
+// const projectName = 'markdown-previewer';
+// localStorage.setItem('example_project', 'Markdown Previewer');
 
 const renderer = new marked.Renderer();
 const linkRenderer = renderer.link;

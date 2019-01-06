@@ -1,76 +1,61 @@
 <!DOCTYPE html>
-<html lang="en" >
-
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Drum Machine</title>
-  
-  
-  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.2.1/css/bootstrap.min.css'>
+	<meta charset="UTF-8">
+	<title>Drum Machine</title>
 
-      <link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.2.1/css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/style.css">
 
-  
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="js/index.js"></script>
 </head>
-
 <body>
-
-  <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
-<div class="container" id="drum-machine">
-  <div class="row justify-content-center">
-		<div class="col-4">
-			<div class="jumbotron p-4">
-				<div class="container">
-					<h1 id="title" class="text-center">Drum Machine</h1>
-					<div class="row mb-2">
-						<div class="col">
-							<div class="card bg-light display-container">
-								<div class="card-body">
-									<h5 id="display" class="card-title m-0"></h5>
+	<div class="container" id="drum-machine">
+		<div class="row justify-content-center">
+			<div class="col-4">
+				<div class="jumbotron p-4">
+					<div class="container">
+						<h1 id="title" class="text-center">Drum Machine</h1>
+						<div class="row mb-2">
+							<div class="col">
+								<div class="card bg-light display-container">
+									<div class="card-body">
+										<h5 id="display" class="card-title m-0"></h5>
+									</div>
 								</div>
 							</div>
 						</div>
-					</div>
-					<div class="row">
-						<div class="col drum-pads">
-							<div class="row mb-1">
-								<div class="col">
-									<button type="button" id="drum-pad-Q" data-name="Heater 1" class="btn btn-light drum-pad">Q<audio id="Q" class="clip" src="https://s3.amazonaws.com/freecodecamp/drums/Heater-1.mp3"></audio></button>
-									<button type="button" id="drum-pad-W" data-name="Heater 2" class="btn btn-light drum-pad">W<audio id="W" class="clip" src="https://s3.amazonaws.com/freecodecamp/drums/Heater-2.mp3"></audio></button>
-									<button type="button" id="drum-pad-E" data-name="Heater 3" class="btn btn-light drum-pad">E<audio id="E" class="clip" src="https://s3.amazonaws.com/freecodecamp/drums/Heater-3.mp3"></audio></button>
+						<div class="row">
+							<div class="col drum-pads">
+								<div class="row mb-1">
+									<div class="col">
+										<button type="button" id="drum-pad-Q" data-name="Heater 1" class="btn btn-light drum-pad">Q<audio id="Q" class="clip" src="https://s3.amazonaws.com/freecodecamp/drums/Heater-1.mp3"></audio></button>
+										<button type="button" id="drum-pad-W" data-name="Heater 2" class="btn btn-light drum-pad">W<audio id="W" class="clip" src="https://s3.amazonaws.com/freecodecamp/drums/Heater-2.mp3"></audio></button>
+										<button type="button" id="drum-pad-E" data-name="Heater 3" class="btn btn-light drum-pad">E<audio id="E" class="clip" src="https://s3.amazonaws.com/freecodecamp/drums/Heater-3.mp3"></audio></button>
+									</div>
 								</div>
-							</div>
-							<div class="row mb-1">
-								<div class="col">
-									<button type="button" id="drum-pad-A" data-name="Heater 4" class="btn btn-light drum-pad">A<audio id="A" class="clip" src="https://s3.amazonaws.com/freecodecamp/drums/Heater-4_1.mp3"></audio></button>
-									<button type="button" id="drum-pad-S" data-name="Clap" class="btn btn-light drum-pad">S<audio id="S" class="clip" src="https://s3.amazonaws.com/freecodecamp/drums/Heater-6.mp3"></audio></button>
-									<button type="button" id="drum-pad-D" data-name="Open HH" class="btn btn-light drum-pad">D<audio id="D" class="clip" src="https://s3.amazonaws.com/freecodecamp/drums/Dsc_Oh.mp3"></audio></button>
+								<div class="row mb-1">
+									<div class="col">
+										<button type="button" id="drum-pad-A" data-name="Heater 4" class="btn btn-light drum-pad">A<audio id="A" class="clip" src="https://s3.amazonaws.com/freecodecamp/drums/Heater-4_1.mp3"></audio></button>
+										<button type="button" id="drum-pad-S" data-name="Clap" class="btn btn-light drum-pad">S<audio id="S" class="clip" src="https://s3.amazonaws.com/freecodecamp/drums/Heater-6.mp3"></audio></button>
+										<button type="button" id="drum-pad-D" data-name="Open HH" class="btn btn-light drum-pad">D<audio id="D" class="clip" src="https://s3.amazonaws.com/freecodecamp/drums/Dsc_Oh.mp3"></audio></button>
+									</div>
 								</div>
-							</div>
-							<div class="row">
-								<div class="col">
-									<button type="button" id="drum-pad-Z" data-name="Kick n' Hat" class="btn btn-light drum-pad">Z<audio id="Z" class="clip" src="https://s3.amazonaws.com/freecodecamp/drums/Kick_n_Hat.mp3"></audio></button>
-									<button type="button" id="drum-pad-X" data-name="Kick" class="btn btn-light drum-pad">X<audio id="X" class="clip" src="https://s3.amazonaws.com/freecodecamp/drums/RP4_KICK_1.mp3"></audio></button>
-									<button type="button" id="drum-pad-C" data-name="Closed HH" class="btn btn-light drum-pad">C<audio id="C" class="clip" src="https://s3.amazonaws.com/freecodecamp/drums/Cev_H2.mp3"></audio></button>
+								<div class="row">
+									<div class="col">
+										<button type="button" id="drum-pad-Z" data-name="Kick n' Hat" class="btn btn-light drum-pad">Z<audio id="Z" class="clip" src="https://s3.amazonaws.com/freecodecamp/drums/Kick_n_Hat.mp3"></audio></button>
+										<button type="button" id="drum-pad-X" data-name="Kick" class="btn btn-light drum-pad">X<audio id="X" class="clip" src="https://s3.amazonaws.com/freecodecamp/drums/RP4_KICK_1.mp3"></audio></button>
+										<button type="button" id="drum-pad-C" data-name="Closed HH" class="btn btn-light drum-pad">C<audio id="C" class="clip" src="https://s3.amazonaws.com/freecodecamp/drums/Cev_H2.mp3"></audio></button>
+									</div>
 								</div>
 							</div>
 						</div>
+						<p id="credits" class="mt-2 mb-0">(Audio source: <a href="https://codepen.io/freeCodeCamp/full/MJyNMd" target="_blank">FCC: Drum Machine</a>)</p>
 					</div>
-					<p id="credits" class="mt-2 mb-0">(Audio source: <a href="https://codepen.io/freeCodeCamp/full/MJyNMd" target="_blank">FCC: Drum Machine</a>)</p>
 				</div>
 			</div>
 		</div>
-  </div>
-</div>
-  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
-
-  
-
-    <script  src="js/index.js"></script>
-
-
-
-
+	</div>
 </body>
-
 </html>

@@ -1,5 +1,5 @@
-const projectName = 'drum-machine';
-localStorage.setItem('example_project', 'Drum Machine');
+// const projectName = 'drum-machine';
+// localStorage.setItem('example_project', 'Drum Machine');
 
 const keys = {
 	81: 'Q',

@@ -1,5 +1,5 @@
-const projectName = 'javascript-calculator';
-localStorage.setItem('example_project', 'Javascript Calculator');
+// const projectName = 'javascript-calculator';
+// localStorage.setItem('example_project', 'Javascript Calculator');
 
 const keys = {
 	48: 'zero',

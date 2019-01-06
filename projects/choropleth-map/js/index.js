@@ -1,5 +1,5 @@
-const projectName = 'choropleth';
-localStorage.setItem('example_project', 'D3: Choropleth');
+// const projectName = 'choropleth';
+// localStorage.setItem('example_project', 'D3: Choropleth');
 
 const CountyDataURL = 'https://raw.githubusercontent.com/no-stack-dub-sack/testable-projects-fcc/master/src/data/choropleth_map/counties.json';
 const EducationDataURL = 'https://raw.githubusercontent.com/no-stack-dub-sack/testable-projects-fcc/master/src/data/choropleth_map/for_user_education.json';
@@ -128,7 +128,7 @@ Promise.all([CountyDataURL, EducationDataURL].map(url => d3.json(url))).then(fun
 				.attr('transform', 'translate(0, 36)')
 				.call(legendScaleAxis);
 
-	legend.append('text')             
+	legend.append('text')
 			.attr('transform', 'translate(' + (w / 5) + ', 11)')
 			.style('text-anchor', 'middle')
 			.text('Attainment (%)');

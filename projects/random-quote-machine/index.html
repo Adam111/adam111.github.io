@@ -1,56 +1,41 @@
 <!DOCTYPE html>
-<html lang="en" >
-
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Random Quote Machine</title>
-  
-  
-  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.2.1/css/bootstrap.min.css'>
+	<meta charset="UTF-8">
+	<title>Random Quote Machine</title>
 
-      <link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.2.1/css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/style.css">
 
-  
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://use.fontawesome.com/releases/v5.6.3/js/all.js"></script>
+	<script src="js/index.js"></script>
 </head>
-
 <body>
+	<div class="container">
+		<div class="row">
+			<div class="col">
+				<div class="jumbotron p-4">
+					<div id="quote-box" class="container">
+						<h1 id="title" class="text-center">Random Quote Machine</h1>
 
-  <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
-<div class="container">
-	<div class="row">
-		<div class="col">
-			<div class="jumbotron p-4">
-				<div id="quote-box" class="container">
-					<h1 id="title" class="text-center">Random Quote Machine</h1>
+						<blockquote class="blockquote">
+							<p id="text" class="mb-0"></p>
+							<footer id="author" class="blockquote-footer"><cite title=""></cite></footer>
+						</blockquote>
 
-					<blockquote class="blockquote">
-						<p id="text" class="mb-0"></p>
-						<footer id="author" class="blockquote-footer"><cite title=""></cite></footer>
-					</blockquote>
-
-					<div class="row">
-						<div class="col">
-							<a id="tweet-quote" class="btn btn-primary" href="#" target="_blank"><i class="fab fa-twitter"></i> Tweet this Quote</a>
-						</div>
-						<div class="col text-right">
-							<button id="new-quote" class="btn btn-info" type="button"><i class="fas fa-random"></i> New Random Quote</button>
+						<div class="row">
+							<div class="col">
+								<a id="tweet-quote" class="btn btn-primary" href="#" target="_blank"><i class="fab fa-twitter"></i> Tweet this Quote</a>
+							</div>
+							<div class="col text-right">
+								<button id="new-quote" class="btn btn-info" type="button"><i class="fas fa-random"></i> New Random Quote</button>
+							</div>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
-</div>
-  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
-<script src='https://use.fontawesome.com/releases/v5.6.3/js/all.js'></script>
-
-  
-
-    <script  src="js/index.js"></script>
-
-
-
-
 </body>
-
 </html>

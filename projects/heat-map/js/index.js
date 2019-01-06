@@ -1,5 +1,5 @@
-const projectName = 'heat-map';
-localStorage.setItem('example_project', 'Heat Map');
+// const projectName = 'heat-map';
+// localStorage.setItem('example_project', 'Heat Map');
 
 d3.json('https://raw.githubusercontent.com/freeCodeCamp/ProjectReferenceData/master/global-temperature.json').then(function(data) {
 	const baseTemperature = data['baseTemperature'];
@@ -64,7 +64,7 @@ d3.json('https://raw.githubusercontent.com/freeCodeCamp/ProjectReferenceData/mas
 				.attr('transform', 'translate(0, 36)')
 				.call(legendScaleAxis);
 
-	legend.append('text')             
+	legend.append('text')
 			.attr('transform', 'translate(' + (w / 4) + ', 11)')
 			.style('text-anchor', 'middle')
 			.text('Temperature (°C)');
@@ -92,7 +92,7 @@ d3.json('https://raw.githubusercontent.com/freeCodeCamp/ProjectReferenceData/mas
 			.attr('transform', 'translate(0, ' + (h - padding) + ')')
 			.call(xAxis);
 
-	svg.append('text')             
+	svg.append('text')
 			.attr('transform', 'translate(' + (w / 2) + ', ' + (h - 10) + ')')
 			.style('text-anchor', 'middle')
 			.text('Year');
