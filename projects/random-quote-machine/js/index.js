@@ -3,10 +3,10 @@
 
 $(document).ready(function() {
 	getQuote();
-});
 
-$('#new-quote').click(function() {
-	getQuote();
+	$('#new-quote').click(function() {
+		getQuote();
+	});
 });
 
 function getQuote() {
