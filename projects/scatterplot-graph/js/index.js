@@ -2,7 +2,7 @@
 // localStorage.setItem('example_project', 'D3: Scatter Plot');
 
 document.addEventListener('DOMContentLoaded', function(event) {
-	d3.json('https://raw.githubusercontent.com/freeCodeCamp/ProjectReferenceData/master/cyclist-data.json').then(function(data) {
+	d3.json('https://adam111.github.io/projects/scatterplot-graph/data/cyclist-data.json').then(function(data) {
 		const dataset = data;
 
 		const w = 1032;

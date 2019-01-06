@@ -2,7 +2,7 @@
 // localStorage.setItem('example_project', 'Heat Map');
 
 document.addEventListener('DOMContentLoaded', function(event) {
-	d3.json('https://raw.githubusercontent.com/freeCodeCamp/ProjectReferenceData/master/global-temperature.json').then(function(data) {
+	d3.json('https://adam111.github.io/projects/heat-map/data/global-temperature.json').then(function(data) {
 		const baseTemperature = data['baseTemperature'];
 		const dataset = data['monthlyVariance'];
 
