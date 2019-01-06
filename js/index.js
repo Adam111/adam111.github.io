@@ -1,11 +1,11 @@
-const projectName = 'portfolio';
-localStorage.setItem('example_project', 'Personal Portfolio');
+// const projectName = 'portfolio';
+// localStorage.setItem('example_project', 'Personal Portfolio');
 
 $('body').scrollspy({
 	target: '#navbar'
 });
 
-// Smooth Scroll
+// Smooth Scroll to ID
 $('a[href*="#"]').on('click', function(e) {
 	e.preventDefault();
 
