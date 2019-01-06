@@ -18,7 +18,7 @@ $(document).ready(function() {
 		$(this).find('audio')[0].play();
 		$('#display').html($(this).data('name'));
 	});
-	
+
 	$('audio').bind('ended', function() {
 		$('#display').html('');
 	});

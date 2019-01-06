@@ -1,4 +1,4 @@
-const projectName = "markdown-previewer";
+const projectName = 'markdown-previewer';
 localStorage.setItem('example_project', 'Markdown Previewer');
 
 const renderer = new marked.Renderer();
@@ -9,13 +9,17 @@ renderer.link = function(href, title, text) {
 };
 
 function parseMarkdown() {
-	$('#preview').html(marked($('#editor').val(), { renderer: renderer, gfm: true, breaks: true }));
+	$('#preview').html(marked($('#editor').val(), {
+		renderer: renderer,
+		gfm: true,
+		breaks: true
+	}));
 }
 
 $(document).ready(function() {
 	parseMarkdown();
-	
-  $('#editor').on('change keypress keyup keydown', function() {
+
+	$('#editor').on('change keypress keyup keydown', function() {
 		parseMarkdown();
 	})
 });
