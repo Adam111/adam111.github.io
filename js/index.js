@@ -5,6 +5,7 @@ $('body').scrollspy({
 	target: '#navbar'
 });
 
+// Smooth Scroll
 $('a[href*="#"]').on('click', function(e) {
 	e.preventDefault();
 
