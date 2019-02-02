@@ -17,8 +17,41 @@
 	<script src="https://use.fontawesome.com/releases/v5.6.3/js/all.js"></script>
 	<script src="https://www.google.com/recaptcha/api.js" async defer></script>
 	<script>
+	$(document).ready(function() {
+		$('#contact-form').submit(function(event) {
+			event.preventDefault();
+			grecaptcha.reset();
+			grecaptcha.execute();
+		});
+	});
+
 	function onSubmit(token) {
-		document.getElementById('contact-form').submit();
+		$('#submit-button').attr('disabled', 'disabled');
+		$('#spinner').show();
+
+		$.ajax({
+			url: 'https://usebasin.com/f/f8a55f3aacfc.json',
+			method: 'POST',
+			data: {
+				'name': $('#name').val(),
+				'email': $('#email').val(),
+				'message': $('#message').val(),
+				'g-recaptcha-response': token
+			},
+			dataType: 'json'
+		})
+		.done(function() {
+			$('#spinner').hide();
+			$('#submit-button').removeAttr('disabled');
+			$('#contact-form-result').attr('class', 'alert alert-success mt-2 mb-0').html('Email sent successfully.');
+			// $('#name, #email, #message').val('');
+			$('#contact-form').trigger('reset');
+		})
+		.fail(function() {
+			$('#spinner').hide();
+			$('#submit-button').removeAttr('disabled');
+			$('#contact-form-result').attr('class', 'alert alert-danger mt-2 mb-0').html('Error. Please try again.');
+		});
 	}
 	</script>
 	<script src="/js/index.js"></script>
@@ -56,19 +89,26 @@
 					<div class="col">
 						<form id="contact-form" action="https://usebasin.com/f/f8a55f3aacfc" method="post" accept-charset="UTF-8">
 							<div class="form-group mb-2">
-								<input class="form-control" type="text" name="name" placeholder="Your name" required>
+								<input id="name" class="form-control" type="text" name="name" placeholder="Your name" required>
 							</div>
 							<div class="form-group mb-2">
 								<input id="email" class="form-control" type="email" name="email" placeholder="Your email address" required>
 							</div>
 							<div class="form-group mb-2">
-								<textarea class="form-control" rows="3" name="message" placeholder="Your message" required></textarea>
+								<textarea id="message" class="form-control" rows="3" name="message" placeholder="Your message" required></textarea>
 							</div>
 							<div class="form-group mb-2">
 								<span>This site is protected by reCAPTCHA and the Google <a href="https://policies.google.com/privacy" target="_blank" title="Privacy Policy">Privacy Policy</a> and <a href="https://policies.google.com/terms" target="_blank" title="Terms of Service">Terms of Service</a> apply.</span>
+								<div id="recaptcha" class="g-recaptcha" data-sitekey="6Lew3SMUAAAAAJ82QoS7gqOTkRI_dhYrFy1f7Sqy" data-callback="onSubmit" data-size="invisible"></div>
 							</div>
-							<button type="submit" class="btn btn-primary mx-auto d-block g-recaptcha" data-sitekey="6Lew3SMUAAAAAJ82QoS7gqOTkRI_dhYrFy1f7Sqy" data-callback="onSubmit">Send</button>
+							<button id="submit-button" class="btn btn-primary mx-auto d-block g-recaptcha" type="submit">Send</button>
 						</form>
+						<div id="spinner" class="text-center mt-2" style="display: none;">
+							<div class="spinner-border" role="status">
+								<span class="sr-only">Loading...</span>
+							</div>
+						</div>
+						<div id="contact-form-result" class="alert d-none" role="alert"></div>
 					</div>
 					<div class="col">
 						<p>You can use the form on the left to send me a message. I try to reply as soon as possible.</p>
