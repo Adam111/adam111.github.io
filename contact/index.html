@@ -10,6 +10,12 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.2.1/js/bootstrap.min.js"></script>
 	<script src="https://use.fontawesome.com/releases/v5.6.3/js/all.js"></script>
+	<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+	<script>
+	function onSubmit(token) {
+		document.getElementById('contact-form').submit();
+	}
+	</script>
 	<script src="/js/index.js"></script>
 </head>
 <body class="d-flex flex-column h-100">
@@ -43,17 +49,17 @@
 				<h2 class="text-center">Contact</h2>
 				<div class="row">
 					<div class="col">
-						<form action="#" method="post">
+						<form id="contact-form" action="https://usebasin.com/f/f8a55f3aacfc" method="post" accept-charset="UTF-8">
 							<div class="form-group mb-2">
-								<input type="text" class="form-control" name="Name" placeholder="Your name" required>
+								<input class="form-control" type="text" name="name" placeholder="Your name" required>
 							</div>
 							<div class="form-group mb-2">
-								<input type="email" class="form-control" name="Email" placeholder="Your email address" required>
+								<input id="email" class="form-control" type="email" name="email" placeholder="Your email address" required>
 							</div>
 							<div class="form-group mb-2">
-								<textarea class="form-control" rows="3" name="Message" placeholder="Your message" required></textarea>
+								<textarea class="form-control" rows="3" name="message" placeholder="Your message" required></textarea>
 							</div>
-							<button type="submit" class="btn btn-primary mx-auto d-block">Send</button>
+							<button type="submit" class="btn btn-primary mx-auto d-block mt-2 g-recaptcha" data-sitekey="6Lew3SMUAAAAAJ82QoS7gqOTkRI_dhYrFy1f7Sqy" data-callback="onSubmit" data-badge="inline">Send</button>
 						</form>
 					</div>
 					<div class="col">
