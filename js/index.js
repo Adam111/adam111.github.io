@@ -1,7 +1,7 @@
 $(document).ready(function() {
-	$('body').scrollspy({
-		target: '#navbar'
-	});
+	// $('body').scrollspy({
+	// 	target: '#navbar'
+	// });
 
 	// Smooth Scroll to ID
 	$('a[href*="#"]').on('click', function(e) {

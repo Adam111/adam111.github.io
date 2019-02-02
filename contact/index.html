@@ -23,13 +23,13 @@
 				<div class="collapse navbar-collapse" id="navbarNav">
 					<ul class="nav nav-pills">
 						<li class="nav-item">
-							<a class="nav-link active" href="/">About Me <span class="sr-only">(current)</span></a>
+							<a class="nav-link" href="/">About Me</a>
 						</li>
 						<li class="nav-item">
 							<a class="nav-link" href="/portfolio/">Portfolio</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" href="/contact/">Contact</a>
+							<a class="nav-link active" href="/contact/">Contact <span class="sr-only">(current)</span></a>
 						</li>
 					</ul>
 				</div>
@@ -38,11 +38,33 @@
 	</header>
 
 	<main role="main" class="flex-shrink-0">
-		<div id="about" class="container">
-			<div id="about-me" class="jumbotron">
-				<div class="text-middle">
-					<h1 class="text-title text-center">About Me</h1>
-					<p>Experienced Web Developer with a demonstrated history of working in the information technology and services industry. Skilled in PHP, CodeIgniter, HTML, CSS, JavaScript, jQuery, and WordPress.</p>
+		<div id="contact" class="container">
+			<div class="jumbotron">
+				<h2 class="text-center">Contact</h2>
+				<div class="row">
+					<div class="col">
+						<form action="#" method="post">
+							<div class="form-group mb-2">
+								<input type="text" class="form-control" name="Name" placeholder="Your name" required>
+							</div>
+							<div class="form-group mb-2">
+								<input type="email" class="form-control" name="Email" placeholder="Your email address" required>
+							</div>
+							<div class="form-group mb-2">
+								<textarea class="form-control" rows="3" name="Message" placeholder="Your message" required></textarea>
+							</div>
+							<button type="submit" class="btn btn-primary mx-auto d-block">Send</button>
+						</form>
+					</div>
+					<div class="col">
+						<p>You can use the form on the left to send me a message. I try to reply as soon as possible.</p>
+						<p>You can also have a look at my profile on other sites.</p>
+						<div class="profile-buttons">
+							<a class="social-button" href="https://www.linkedin.com/in/adam-papp/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin fa-3x"></i></a>
+							<a class="social-button" href="https://github.com/Adam111" target="_blank" title="GitHub"><i class="fab fa-github fa-3x"></i></a>
+							<a id="profile-link" class="social-button" href="https://www.freecodecamp.org/adam111" target="_blank" title="freeCodeCamp"><i class="fab fa-free-code-camp fa-3x"></i></a>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
