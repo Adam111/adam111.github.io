@@ -6,6 +6,11 @@
 
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.2.1/css/bootstrap.min.css">
 	<link rel="stylesheet" href="/css/style.css">
+	<style>
+	.grecaptcha-badge {
+		display: none;
+	}
+	</style>
 
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.2.1/js/bootstrap.min.js"></script>
@@ -59,7 +64,10 @@
 							<div class="form-group mb-2">
 								<textarea class="form-control" rows="3" name="message" placeholder="Your message" required></textarea>
 							</div>
-							<button type="submit" class="btn btn-primary mx-auto d-block mt-2 g-recaptcha" data-sitekey="6Lew3SMUAAAAAJ82QoS7gqOTkRI_dhYrFy1f7Sqy" data-callback="onSubmit" data-badge="inline">Send</button>
+							<div class="form-group mb-2">
+								<span>This site is protected by reCAPTCHA and the Google <a href="https://policies.google.com/privacy" target="_blank" title="Privacy Policy">Privacy Policy</a> and <a href="https://policies.google.com/terms" target="_blank" title="Terms of Service">Terms of Service</a> apply.</span>
+							</div>
+							<button type="submit" class="btn btn-primary mx-auto d-block g-recaptcha" data-sitekey="6Lew3SMUAAAAAJ82QoS7gqOTkRI_dhYrFy1f7Sqy" data-callback="onSubmit">Send</button>
 						</form>
 					</div>
 					<div class="col">
