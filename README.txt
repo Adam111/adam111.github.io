@@ -1,1 +1,1 @@
-A Pen created at CodePen.io. You can find this one at https://codepen.io/Adam111/pen/OjbxeV.
+This is Adam's personal site, hosted on [GitHub Pages](https://pages.github.com "GitHub Pages").

@@ -1,6 +1,3 @@
-// const projectName = 'portfolio';
-// localStorage.setItem('example_project', 'Personal Portfolio');
-
 $(document).ready(function() {
 	$('body').scrollspy({
 		target: '#navbar'

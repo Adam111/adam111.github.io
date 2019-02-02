@@ -2,24 +2,10 @@
 	margin-top: 2rem;
 }
 
-#welcome-section {
-	height: 100vh;
-}
-
-#welcome-section .text-middle {
-	padding-top: 39vh !important;
-}
-
 .text-title {
 	font-size: 30px !important;
 }
 
 .social-button {
 	margin: 5px;
-}
-
-@media screen and (max-width: 767px) {
-	.social-button {
-		margin: 3px;
-	}
 }
