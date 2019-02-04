@@ -27,6 +27,7 @@
 
 	function onSubmit(token) {
 		$('#submit-button').attr('disabled', 'disabled');
+		$('#contact-form-result').attr('class', 'alert d-none').html('');
 		$('#spinner').show();
 
 		$.ajax({
