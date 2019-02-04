@@ -28,7 +28,7 @@
 
 	function onSubmit(token) {
 		$('#submit-button').attr('disabled', 'disabled');
-		$('#contact-form-result').attr('class', 'alert d-none').html('');
+		$('#contact-form-result .alert').alert('close');
 		$('#spinner').show();
 
 		$.ajax({
@@ -45,14 +45,14 @@
 		.done(function() {
 			$('#spinner').hide();
 			$('#submit-button').removeAttr('disabled');
-			$('#contact-form-result').html('Email sent successfully.').attr('class', 'alert alert-success mt-2 mb-0');
+			$('#contact-form-result').html('<div class="alert alert-success alert-dismissible fade show mt-2 mb-0" role="alert"><span>Email sent successfully.</span><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button></div>');
 			// $('#name, #email, #message').val('');
 			$('#contact-form').trigger('reset');
 		})
 		.fail(function() {
 			$('#spinner').hide();
 			$('#submit-button').removeAttr('disabled');
-			$('#contact-form-result').html('Error. Please try again.').attr('class', 'alert alert-danger mt-2 mb-0');
+			$('#contact-form-result').html('<div class="alert alert-danger alert-dismissible fade show mt-2 mb-0" role="alert"><span>Error. Please try again.</span><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button></div>');
 		});
 	}
 	</script>
@@ -109,7 +109,7 @@
 								<span class="sr-only">Loading...</span>
 							</div>
 						</div>
-						<div id="contact-form-result" class="alert d-none" role="alert"></div>
+						<div id="contact-form-result"></div>
 					</div>
 					<div class="col">
 						<p>You can use the form on the left to send me a message. I try to reply as soon as possible.</p>
