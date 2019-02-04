@@ -4,11 +4,11 @@ $(document).ready(function() {
 	// });
 
 	// Smooth Scroll to ID
-	$('a[href*="#"]').on('click', function(e) {
-		e.preventDefault();
+	// $('a[href*="#"]').on('click', function(e) {
+	// 	e.preventDefault();
 
-		$('html, body').animate({
-			scrollTop: $($(this).attr('href')).offset().top
-		}, 200, 'linear');
-	});
+	// 	$('html, body').animate({
+	// 		scrollTop: $($(this).attr('href')).offset().top
+	// 	}, 200, 'linear');
+	// });
 });

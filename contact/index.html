@@ -6,64 +6,14 @@
 
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.2.1/css/bootstrap.min.css">
 	<link rel="stylesheet" href="/css/style.css">
-	<style>
-	.grecaptcha-badge {
-		display: none;
-	}
-	</style>
+	<link rel="stylesheet" href="style.css">
 
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.2.1/js/bootstrap.min.js"></script>
 	<script src="https://use.fontawesome.com/releases/v5.6.3/js/all.js"></script>
 	<script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit" async defer></script>
-	<script src="/js/index.js"></script>
-	<script>
-	$(document).ready(function() {
-		$('#contact-form').submit(function(event) {
-			event.preventDefault();
-			grecaptcha.reset();
-			grecaptcha.execute();
-		});
-	});
-
-	function onloadCallback() {
-		grecaptcha.render('recaptcha', {
-			'sitekey': '6Lew3SMUAAAAAJ82QoS7gqOTkRI_dhYrFy1f7Sqy',
-			'callback': onSubmit,
-			'size': 'invisible'
-		});
-	}
-
-	function onSubmit(token) {
-		$('#submit-button').attr('disabled', 'disabled');
-		$('#contact-form-result .alert').alert('close');
-		$('#spinner').show();
-
-		$.ajax({
-			url: 'https://usebasin.com/f/f8a55f3aacfc.json',
-			method: 'POST',
-			data: {
-				'Name': $('#name').val(),
-				'Email': $('#email').val(),
-				'Message': $('#message').val(),
-				'g-recaptcha-response': token
-			},
-			dataType: 'json'
-		})
-		.done(function() {
-			$('#spinner').hide();
-			$('#submit-button').removeAttr('disabled');
-			$('#contact-form-result').html('<div class="alert alert-success alert-dismissible fade show mt-2 mb-0" role="alert"><span>Email sent successfully.</span><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button></div>');
-			// $('#name, #email, #message').val('');
-			$('#contact-form').trigger('reset');
-		})
-		.fail(function() {
-			$('#spinner').hide();
-			$('#submit-button').removeAttr('disabled');
-			$('#contact-form-result').html('<div class="alert alert-danger alert-dismissible fade show mt-2 mb-0" role="alert"><span>Error. Please try again.</span><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button></div>');
-		});
-	}
-	</script>
+	<!-- <script src="/js/index.js"></script> -->
+	<script src="script.js"></script>
 </head>
 <body class="d-flex flex-column h-100">
 	<header>
@@ -123,9 +73,9 @@
 						<p>You can use the form on the left to send me a message. I try to reply as soon as possible.</p>
 						<p>You can also have a look at my profile on other sites.</p>
 						<div class="profile-buttons">
-							<a class="social-button" href="https://www.linkedin.com/in/adam-papp/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin fa-3x"></i></a>
-							<a class="social-button" href="https://github.com/Adam111" target="_blank" title="GitHub"><i class="fab fa-github fa-3x"></i></a>
-							<a id="profile-link" class="social-button" href="https://www.freecodecamp.org/adam111" target="_blank" title="freeCodeCamp"><i class="fab fa-free-code-camp fa-3x"></i></a>
+							<a href="https://www.linkedin.com/in/adam-papp/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin fa-3x mr-1"></i></a>
+							<a href="https://github.com/Adam111" target="_blank" title="GitHub"><i class="fab fa-github fa-3x mr-1"></i></a>
+							<a href="https://www.freecodecamp.org/adam111" target="_blank" title="freeCodeCamp"><i class="fab fa-free-code-camp fa-3x mr-1"></i></a>
 						</div>
 					</div>
 				</div>
@@ -136,9 +86,9 @@
 	<footer class="footer mt-auto py-3 bg-light">
 		<div class="container text-center">
 			<div class="profile-buttons">
-				<a class="social-button" href="https://www.linkedin.com/in/adam-papp/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin fa-2x"></i></a>
-				<a class="social-button" href="https://github.com/Adam111" target="_blank" title="GitHub"><i class="fab fa-github fa-2x"></i></a>
-				<a id="profile-link" class="social-button" href="https://www.freecodecamp.org/adam111" target="_blank" title="freeCodeCamp"><i class="fab fa-free-code-camp fa-2x"></i></a>
+				<a href="https://www.linkedin.com/in/adam-papp/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin fa-2x mr-1"></i></a>
+				<a href="https://github.com/Adam111" target="_blank" title="GitHub"><i class="fab fa-github fa-2x mr-1"></i></a>
+				<a href="https://www.freecodecamp.org/adam111" target="_blank" title="freeCodeCamp"><i class="fab fa-free-code-camp fa-2x mr-1"></i></a>
 			</div>
 			<span class="text-muted">Made by Adam</span>
 		</div>
