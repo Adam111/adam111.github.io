@@ -15,7 +15,7 @@ function onloadCallback() {
 }
 
 function onSubmit(token) {
-	$('#submit-button').attr('disabled', 'disabled').html('<span class="spinner-border spinner-border-sm" role="status"></span> <span>Sending email...</span>');
+	$('#submit-button').attr('disabled', 'disabled').html('<span class="spinner-border spinner-border-sm" role="status"></span> <span>Sending...</span>');
 	$('#contact-form-result .alert').alert('close');
 
 	$.ajax({
