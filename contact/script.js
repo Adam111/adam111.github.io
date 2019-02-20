@@ -17,7 +17,7 @@ function onloadCallback() {
 function onSubmit(token) {
 	$('#submit-button').attr('disabled', 'disabled');
 	$('#contact-form-message .alert').alert('close');
-	$('#contact-form-message').html('<div class="alert alert-primary mt-2 mb-0" role="alert"><div class="spinner-border spinner-border-sm text-primary" role="status"><span class="sr-only">Loading...</span></div> <span>Sending...</span></div>');
+	$('#contact-form-message').html('<div class="alert alert-primary mt-2 mb-0" role="alert"><div class="spinner-border spinner-border-sm text-primary" role="status"><span class="sr-only">Loading...</span></div> <span>Sending email...</span></div>');
 
 	$.ajax({
 		url: 'https://usebasin.com/f/f8a55f3aacfc.json',
