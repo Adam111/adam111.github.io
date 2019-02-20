@@ -17,7 +17,7 @@ function onloadCallback() {
 function onSubmit(token) {
 	$('#submit-button').attr('disabled', 'disabled');
 	$('#contact-form-result .alert').alert('close');
-	$('#spinner').show();
+	$('#contact-form-result').html('<div class="alert alert-primary mt-2 mb-0" role="alert"><div class="spinner-border spinner-border-sm text-primary" role="status"><span class="sr-only">Loading...</span></div> <span>Sending...</span></div>');
 
 	$.ajax({
 		url: 'https://usebasin.com/f/f8a55f3aacfc.json',
@@ -31,14 +31,12 @@ function onSubmit(token) {
 		dataType: 'json'
 	})
 	.done(function() {
-		$('#spinner').hide();
 		$('#submit-button').removeAttr('disabled');
 		$('#contact-form-result').html('<div class="alert alert-success alert-dismissible fade show mt-2 mb-0" role="alert"><span>Email sent successfully.</span><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button></div>');
 		// $('#name, #email, #message').val('');
 		$('#contact-form').trigger('reset');
 	})
 	.fail(function() {
-		$('#spinner').hide();
 		$('#submit-button').removeAttr('disabled');
 		$('#contact-form-result').html('<div class="alert alert-danger alert-dismissible fade show mt-2 mb-0" role="alert"><span>Error. Please try again.</span><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button></div>');
 	});
