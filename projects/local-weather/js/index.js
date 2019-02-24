@@ -12,7 +12,9 @@ $(document).ready(function() {
 		});
 	}
 
-	$('#unit').click(function() {
+	$('#unit').click(function(e) {
+		e.preventDefault();
+
 		var temperature = $('#temperature').text();
 
 		if (unit == 'C') {
