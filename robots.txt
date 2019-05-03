@@ -1,3 +1,3 @@
 User-agent: *
 Disallow:
-Sitemap: https://adam111.github.io/sitemap.xml
+Sitemap: https://adam777z.github.io/sitemap.xml

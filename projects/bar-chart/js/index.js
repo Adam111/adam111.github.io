@@ -2,7 +2,7 @@
 // localStorage.setItem('example_project', 'D3: Bar Chart');
 
 document.addEventListener('DOMContentLoaded', function(event) {
-	d3.json('https://adam111.github.io/projects/bar-chart/data/GDP-data.json').then(function(data) {
+	d3.json('https://adam777z.github.io/projects/bar-chart/data/GDP-data.json').then(function(data) {
 		const dataset = data['data'];
 
 		const w = 1032;

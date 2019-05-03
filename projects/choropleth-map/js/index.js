@@ -2,8 +2,8 @@
 // localStorage.setItem('example_project', 'D3: Choropleth');
 
 document.addEventListener('DOMContentLoaded', function(event) {
-	const CountyDataURL = 'https://adam111.github.io/projects/choropleth-map/data/counties.json';
-	const EducationDataURL = 'https://adam111.github.io/projects/choropleth-map/data/for_user_education.json';
+	const CountyDataURL = 'https://adam777z.github.io/projects/choropleth-map/data/counties.json';
+	const EducationDataURL = 'https://adam777z.github.io/projects/choropleth-map/data/for_user_education.json';
 
 	Promise.all([CountyDataURL, EducationDataURL].map(url => d3.json(url))).then(function(data) {
 		const CountyData = data[0];
