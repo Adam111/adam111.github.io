@@ -2,3 +2,8 @@
 	margin-top: 2rem;
 	padding: 2rem;
 }
+
+.profile-buttons img {
+	height: 24px;
+	vertical-align: baseline;
+}
