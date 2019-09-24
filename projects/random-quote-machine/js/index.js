@@ -10,9 +10,9 @@ $(document).ready(function() {
 });
 
 function getQuote() {
-	$.getJSON('https://quotesondesign.com/wp-json/posts?filter[orderby]=rand&filter[posts_per_page]=1&_=' + $.now(), function(data) {
-		var quote = $.trim($($.parseHTML(data[0].content)).text());
-		var author = data[0].title;
+	$.getJSON('https://quotesondesign.com/wp-json/wp/v2/posts/?orderby=rand&per_page=1&_=' + $.now(), function(data) {
+		var quote = $.trim($($.parseHTML(data[0]['content']['rendered'])).text());
+		var author = data[0]['title']['rendered'];
 		var tweetText = '"' + quote + '" - ' + author;
 
 		$('blockquote p').html(quote);
